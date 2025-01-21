@@ -1,0 +1,209 @@
+/* General Container Styling */
+.add-skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff6f0, #ffdab9);
+    padding: 2rem;
+    perspective: 1000px;
+  }
+  
+  .add-skill-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+  }
+  
+  /* Illustration Styling */
+  .illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+  }
+  
+  .skill-illustration {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 500px;
+  }
+  
+  /* Form Styling */
+  .add-skill-form {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 400px;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .add-skill-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .add-skill-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #ff7f50;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-skill-form h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff7f50, #ff4500);
+    border-radius: 2px;
+  }
+  
+  /* Form Elements */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus {
+    border-color: #ff7f50;
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .add-skill-form button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #ff7f50, #ff4500);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  
+  .add-skill-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .add-skill-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+  }
+  
+  .add-skill-form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.4);
+  }
+  
+  .add-skill-form button:hover:not(:disabled)::before {
+    left: 100%;
+  }
+  
+  /* Message Styling */
+  .message {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .message.success {
+    background-color: rgba(46, 213, 115, 0.15);
+    color: #2ed573;
+  }
+  
+  .message.error {
+    background-color: rgba(255, 71, 87, 0.15);
+    color: #ff4757;
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .add-skill-wrapper {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .illustration {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .add-skill-form {
+      padding: 2rem 1.5rem;
+      margin: 1rem;
+    }
+  
+    .add-skill-form h2 {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  }

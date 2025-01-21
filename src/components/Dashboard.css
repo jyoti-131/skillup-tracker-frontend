@@ -1,0 +1,14 @@
+.dashboard {
+    font-family: "Arial", sans-serif;
+    margin: 20px;
+  }
+  
+  .dashboard h1 {
+    text-align: center;
+  }
+  
+  .chart {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  

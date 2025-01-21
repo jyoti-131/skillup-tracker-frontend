@@ -1,0 +1,225 @@
+/* Login Page Container */
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff6f0, #ffdab9);
+  padding: clamp(1rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2rem, 5vw, 4rem);
+  position: relative;
+}
+
+/* Illustration Section */
+.illustration-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px; /* Increased from 600px */
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.illustration-section img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: min(75vh, 700px); /* Increased max-height */
+  transition: transform 0.5s ease;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.remember-me label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+/* Adjustments for Smaller Screens */
+@media (max-width: 900px) {
+  .illustration-section {
+    max-width: 500px; /* Slightly increase for better visibility */
+  }
+
+  .illustration-section img {
+    max-height: min(60vh, 500px); /* Adjust illustration height */
+    transform: scale(1.1); /* Slight enlargement for better focus */
+  }
+}
+
+@media (max-width: 600px) {
+  .illustration-section {
+    max-width: 400px; /* Ensure layout remains balanced */
+  }
+
+  .illustration-section img {
+    max-height: 70vh; /* Increase relative size for smaller screens */
+    transform: scale(1.2); /* Further enlarge */
+  }
+}
+
+
+/* Form Container */
+.form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+/* Login Form Styling */
+.login-form {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: clamp(12px, 2vw, 16px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  width: 100%;
+  max-width: 400px; /* Ensures the form does not grow too large */
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  color: #ff7f50;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(30px, 10%, 50px);
+  height: 3px;
+  background: linear-gradient(90deg, #ff7f50, #ff4500);
+  border-radius: 2px;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 2vw, 1.2rem);
+  border: 2px solid #eee;
+  border-radius: clamp(8px, 1.5vw, 10px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #ff7f50;
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 127, 80, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  background: linear-gradient(45deg, #ff7f50, #ff4500);
+  color: #ffffff;
+  border: none;
+  border-radius: clamp(8px, 1.5vw, 10px);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* Form Footer */
+.form-footer {
+  text-align: center;
+  margin-top: clamp(1rem, 3vw, 1.5rem);
+}
+
+.form-footer p {
+  color: #666;
+  margin: 0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .form-container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  .illustration-section {
+    max-width: 400px;
+  }
+
+  .form-container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .illustration-section {
+    max-width: 300px;
+  }
+
+  .illustration-section img {
+    max-height: 150px;
+  }
+
+  .login-form {
+    padding: 1rem;
+  }
+}
+
+/* Modern Browser Support */
+@supports (backdrop-filter: blur(10px)) {
+  .login-form {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+}

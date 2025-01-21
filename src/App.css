@@ -1,0 +1,252 @@
+/* Welcome section wrapper */
+.landing-page {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff6f0, #ffdab9);
+  min-height: calc(100vh - 60px); /* Accounts for footer height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+}
+
+/* Illustration container styling */
+.illustration-container {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.illustration-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(5px);
+}
+
+.illustration-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform-origin: center bottom;
+}
+
+/* Welcome message container */
+.welcome-message {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Decorative elements */
+.welcome-message::before,
+.welcome-message::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #ffdab9, transparent);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.welcome-message::before {
+  top: -20px;
+  left: -20px;
+}
+
+.welcome-message::after {
+  bottom: -20px;
+  right: -20px;
+  background: linear-gradient(225deg, #ffe4c4, transparent);
+}
+
+/* Heading styles */
+.welcome-message h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  position: relative;
+  line-height: 1.2;
+  background: linear-gradient(45deg, #333333, #666666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-message h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffdab9, #ffe4c4);
+  border-radius: 2px;
+}
+
+/* Paragraph styles */
+.welcome-message p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations */
+.welcome-message {
+  animation: fadeScale 0.8s ease-out forwards;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 1rem;
+  }
+
+  .illustration-container {
+    margin-top: 2rem;
+    max-width: 400px;
+  }
+
+  .welcome-message {
+    margin-top: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .welcome-message h1 {
+    font-size: 2.2rem;
+  }
+
+  .welcome-message p {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .landing-page {
+    padding: 4rem 2rem;
+  }
+
+  .illustration-container {
+    max-width: 700px;
+  }
+
+  .welcome-message {
+    max-width: 700px;
+  }
+}
+
+/* Additional enhancements for taller screens */
+@media (min-height: 900px) {
+  .landing-page {
+    justify-content: center;
+  }
+
+  .illustration-container {
+    margin-top: 0;
+  }
+}
+
+
+/* Footer Container */
+.footer {
+  background-color: #1a1a1a; /* Dark background */
+  color: white; /* Text color */
+  padding: 15px 0; /* Padding for height */
+  text-align: center; /* Center-align content */
+  width: 100%; /* Full width */
+  position: relative; /* Relative to avoid overlap */
+  margin-top: auto; /* Pushes footer below content */
+}
+
+/* Footer Title */
+.footer-title {
+  font-size: 1.5rem; /* Footer title size */
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Footer Description */
+.footer-description {
+  font-size: 0.9rem; /* Footer description size */
+  color: #cccccc; /* Light grey color */
+  margin: 0 auto;
+  max-width: 400px; /* Restrict description width */
+  line-height: 1.5;
+}
+
+/* Navbar Toggle */
+.navbar-toggler {
+  cursor: pointer;
+  background-color: #ffdab9;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff6f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-menu.show {
+  display: flex;
+}

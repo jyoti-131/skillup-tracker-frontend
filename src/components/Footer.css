@@ -1,0 +1,24 @@
+/* Footer Container */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Footer Title */
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Footer Description */
+.footer-description {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #cccccc;
+    padding: 0 20px;
+}
+
