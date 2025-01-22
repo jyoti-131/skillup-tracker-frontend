@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 🌟 **SkillUp Tracker Frontend** 🌟
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 **SkillUp Tracker** is a personalized skill management and learning tracker designed to help users set goals, monitor their progress, and stay motivated. This repository contains the **frontend** of the project, built with **React.js**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ **Features**
+- 📋 **User Authentication**: Secure sign-up and login functionality with JWT-based authentication.
+- 🎯 **Skill Management**: Add, edit, and track your learning goals.
+- 📊 **Progress Tracking**: Visualize progress over time using interactive features.
+- 📱 **Responsive Design**: Seamless user experience across devices (desktop, tablet, and mobile).
+- 🔒 **Remember Me**: Stay logged in with the 'Remember Me' feature for a smoother experience.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ **Technologies Used**
+### **Frontend**
+- ⚛️ **React.js**
+- 💅 **CSS3** (for styling)
+- 🌐 **Axios** (for API integration)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Backend** (Deployed Separately)
+- 🟢 **Node.js** (Express)
+- 📦 **MongoDB** (Database)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ **Installation and Setup**
+Follow these steps to run the frontend locally:  
 
-### `npm run build`
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/jyoti-131/skillup-tracker-frontend.git
+cd skillup-tracker-frontend
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **2. Install Dependencies**
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **3. Set Environment Variables**
+Create a `.env` file in the root directory with the following content:  
+```env
+REACT_APP_BACKEND_URL=https://skillup-tracker-backend.onrender.com
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **4. Start the Development Server**
+```bash
+npm start
+```
+Visit `http://localhost:3000` in your browser to view the app locally.  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 👩‍💻 **How It Works**
+1. **Sign up or Log in** using your email and password.
+2. Set your skill goals and update progress over time.
+3. Monitor your learning journey and celebrate milestones! 🎉
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🤝 **Contributing**
+Contributions are welcome! If you'd like to make improvements:
+1. Fork this repository.
+2. Create a new branch (`feature/awesome-feature`).
+3. Commit your changes.
+4. Submit a pull request. 💡
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📬 **Contact**
+For queries or suggestions, feel free to reach out:  
+📧 **Email:** [jyoti@example.com](mailto:jyotisinhap7@gmail.com)  
+🔗 **GitHub Profile:** [Jyoti's GitHub](https://github.com/jyoti-131)  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐ if you like this project! 😊  
