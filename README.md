@@ -72,7 +72,7 @@ Contributions are welcome! If you'd like to make improvements:
 
 ## 📬 **Contact**
 For queries or suggestions, feel free to reach out:  
-📧 **Email:** [jyoti@example.com](mailto:jyotisinhap7@gmail.com)  
+📧 **Email:** [jyoti's Email](mailto:jyotisinhap7@gmail.com)  
 🔗 **GitHub Profile:** [Jyoti's GitHub](https://github.com/jyoti-131)  
 
 ---
